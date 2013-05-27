@@ -92,7 +92,7 @@ body {
 
 /* pageBg */
 .pageBg {
-	background:#ffc423 url(../img/brand-bg.png) center top no-repeat; background-size:cover; }
+	background:transparent url(../img/brand-bg.png) center top no-repeat; background-size:cover; }
 
 /* page */
 .page {
@@ -110,19 +110,19 @@ body {
 /* interaction - menu */
 .page.currentPage.menuActive {
 	/*transform*/
-	-webkit-transform:translate(83%,0);
-	-moz-transform:translate(83%,0);
-	-ms-transform:translate(83%,0);
-	-o-transform:translate(83%,0);
-	transform:translate(83%,0); }
+	-webkit-transform:translate(-83%,0);
+	-moz-transform:translate(-83%,0);
+	-ms-transform:translate(-83%,0);
+	-o-transform:translate(-83%,0);
+	transform:translate(-83%,0); }
 #pgMenu {
 	width:84%;
 	/*transform*/
-	-webkit-transform:translate(0,0)!important;
-	-moz-transform:translate(0,0)!important;
-	-ms-transform:translate(0,0)!important;
-	-o-transform:translate(0,0)!important;
-	transform:translate(0,0)!important; }
+	-webkit-transform:translate(19%,0)!important;
+	-moz-transform:translate(19%,0)!important;
+	-ms-transform:translate(19%,0)!important;
+	-o-transform:translate(19%,0)!important;
+	transform:translate(19%,0)!important; }
 
 /*
 #pgMenu .pageShadow 				{ display:none; }
@@ -318,11 +318,10 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 .brandTitle {
 	display:block; width:270px; height:75px; margin:0 auto; padding:0; overflow:hidden;
 	background:url(../img/brand-title.png) center center no-repeat; background-size:contain; }
-
-/* collage/artwork */
-.brandImage {
-	display:block; width:100%; height:0; margin:0 auto; padding:54.68% 0 0 0; overflow:hidden;
-	background:url(../img/brand-img.png) center top no-repeat; background-size:contain; }
+	
+.brandTitleSplash {
+	display:block; width:210px; height:210px; margin:0 auto; padding:0; overflow:hidden;
+	background:url(../img/brand-title-splash.png) center center no-repeat; background-size:contain; }
 
 
 /* ==========================================================================
@@ -332,7 +331,8 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 /* -------------------------------------------------------------------------- */
 /* container */
 .menu {
-	position:absolute; bottom:0; left:0; width:100%; height:290px; margin:0; padding:0; overflow:hidden;
+	position:absolute; bottom:0; left:0; width:100%; height:240px; margin:0; padding:0; overflow:hidden;
+	border-top:8px solid #404040;
 	/*transition*/
 	/*-webkit-transform:translate3d(0,0,0);*/
 	-webkit-transition:-webkit-transform 0.3s ease-in-out;
@@ -386,8 +386,8 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 			/* icon */
 			.menu .menuItems .icon {
-				position:static; width:35px; height:35px; margin:15px auto 0 auto; overflow:hidden;
-				font-size:35px; line-height:1em; text-align:center; }
+				position:static; width:40px; height:40px; margin:12px auto 2px auto; overflow:hidden;
+				font-size:40px; line-height:1em; text-align:center; }
 
 			/* bubble */
 			.menu .menuItems .bubble {
@@ -395,8 +395,8 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 			/* label */
 			.menu .menuItems .label {
-				display:block; width:auto; height:auto; margin:9px; padding:0; overflow:hidden;
-				font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; line-height:1em; text-align:center; }
+				display:block; width:auto; height:auto; margin:0 9px; padding:0; overflow:hidden;
+				font-family:'Montserrat',sans-serif; font-size:13px; font-weight:700; line-height:1em; text-align:center; }
 
 		/* interaction */
 		.menu .menuItem.active {
@@ -452,9 +452,9 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 		/* label */
 		.menuList .title .label {
-			display:block; width:auto; height:auto; margin:15px; padding:0; overflow:hidden;
+			display:block; width:auto; height:auto; margin:13px; padding:0; overflow:hidden;
 			color:#fff; text-shadow:0 1px 0 rgba(0,0,0,0.5); white-space:nowrap; text-overflow:ellipsis;
-			font-family:'SourceSansPro',sans-serif; font-size:20px; font-weight:600; line-height:20px; }
+			font-family:'SourceSansPro',sans-serif; font-size:24px; font-weight:600; line-height:24px; }
 
 	/* -------------------------------------------------------------------------- */
 	/* scroller */
@@ -470,13 +470,13 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 		/* menuItem */
 		.menuList .menuItem {
 			display:block; position:relative; width:100%; height:42px; margin:0; padding:0 15px; overflow:hidden;
-			color:#777; background:transparent; border-top:1px solid #333; border-bottom:1px solid rgba(0,0,0,0.5);
+			color:#bbb; background:transparent; border-top:1px solid #333; border-bottom:1px solid rgba(0,0,0,0.5);
 			/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
 
 			/* icon */
 			.menuList .menuItems .icon {
-				position:static; width:24px; height:42px; padding:0; vertical-align:middle;
-				font-size:24px; line-height:40px; text-align:center; }
+				position:static; width:28px; height:42px; margin-left:-2px; padding:0; vertical-align:middle;
+				font-size:28px; line-height:40px; text-align:center; }
 
 			/* bubble */
 			.menuList .menuItems .bubble {
@@ -484,12 +484,12 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 			/* label */
 			.menuList .menuItems .label {
-				display:inline-block; width:auto; height:auto; margin:0 15px; padding:0; overflow:hidden;
+				display:inline-block; width:auto; height:auto; margin:0 10px; padding:0; overflow:hidden;
 				white-space:nowrap; text-overflow:ellipsis; vertical-align:middle;
-				font-family:'Montserrat',sans-serif; font-size:11px; font-weight:700; line-height:42px; text-align:center; }
+				font-family:'Montserrat',sans-serif; font-size:15px; font-weight:700; line-height:42px; text-align:center; }
 
 		/* interaction */
-		.menuList .menuItem.active { background:#ffc423; border-color:#ffc423; }
+		.menuList .menuItem.active { background:#54bec6; border-color:#54bec6; }
 		.menuList .menuItem.active .icon,
 		.menuList .menuItem.active .label { color:#fff; }
 		.menuList .menuItem.active .icon { text-shadow:0px 0px 5px rgba(255,255,255,1); }
@@ -953,7 +953,7 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
 .bubble {
 	display:inline-block; overflow:hidden;
 	position:absolute; width:auto; max-width:60px; height:auto; padding:3px; overflow:hidden;
-	color:#fff; background:#3f95b2; border:2px solid #fff; white-space:nowrap; text-overflow:ellipsis;
+	color:#fff; background:#2a4d8e; border:2px solid #fff; white-space:nowrap; text-overflow:ellipsis;
 	font-family:'Montserrat',sans-serif; font-size:10px; font-weight:700; line-height:10px; text-align:center;
 	/*border-radius*/-webkit-border-radius:13px; border-radius:13px;
 	/*background-clip*/-moz-background-clip:padding; -webkit-background-clip:padding-box; background-clip:padding-box;
@@ -964,8 +964,11 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
    common - BG
    ========================================================================== */
 
-.bgPattern {
-	background:url(../img/body-tile.png) 0 0 repeat; background-size:4px; }
+.bgPatternDark {
+	background:url(../img/bg-tile-dark.png) 0 0 repeat; background-size:4px; }
+	
+.bgPatternGreen {
+	background:url(../img/bg-tile-green.png) 0 0 repeat; background-size:3px; }
 
 .bgSolidLite {
 	background:#ededed; }
@@ -1032,7 +1035,7 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
    ========================================================================== */
 
 /* brand */
-#pgSplash .pageContent .brandTitle { margin-top:130px; }
+#pgSplash .pageContent .brandTitleSplash { margin-top:75px; }
 
 
 /* ==========================================================================
@@ -1040,8 +1043,7 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
    ========================================================================== */
 
 /* brand */
-#pgHome .pageContent .brandTitle { margin-top:35px; }
-#pgHome .pageContent .brandImage { margin-top:15px; }
+#pgHome .pageContent .brandTitleSplash { margin-top:75px; }
 
 
 /* ==========================================================================
@@ -1049,12 +1051,11 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
    ========================================================================== */
 
 /* pageBg */
-#pgMenu .pageBg { background-position:0 -360px; }
+#pgMenu .pageBg { height:123px; background-color:#54bec6; background-position:center top; }
 #pgMenu .pageBg .bgPattern { position:absolute; top:123px;/*brandTitle height*/ left:0; bottom:0; width:100%; height:auto; margin:0; padding:0; overflow:hidden; }
 
 /* brand */
-#pgMenu .pageContent .brandTitle { margin:35px auto; width:195px; height:53px; }
-#pgMenu .pageContent .brandImage { display:none; }
+#pgMenu .pageContent .brandTitle { margin:24px auto; width:270px; height:75px; }
 
 
 /* ==========================================================================

@@ -150,7 +150,7 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 	.pageHeader .headerTitle {
 		display:block; width:auto; height:auto; margin:0 80px; padding:0; overflow:hidden;
 		color:#fff; text-shadow:0px 1px 0px rgba(0,0,0,0.1); white-space:nowrap; text-overflow:ellipsis;
-		font-family:'SourceSansPro',sans-serif; font-size:22px; font-weight:700; line-height:50px; text-align:center; }
+		font-size:22px; font-weight:700; line-height:50px; text-align:center; }
 
 	/* -------------------------------------------------------------------------- */
 	/* headerBtn */
@@ -234,7 +234,7 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 			display:block; position:relative; width:auto; height:30px; margin:0; padding:0 15px; overflow:hidden; float:left;
 			color:#444; border-left:1px solid rgba(255,255,255,0.8); border-right:1px solid rgba(0,0,0,0.1); text-shadow:0 1px 0 rgba(255,255,255,0.5);
 			white-space:nowrap; text-overflow:ellipsis;
-			font-family:'Montserrat',sans-serif; font-size:8px; font-weight:700; line-height:30px; text-align:center; text-transform:uppercase;
+			font-family:'Montserrat',sans-serif; font-size:9px; font-weight:700; line-height:30px; text-align:center; text-transform:uppercase;
 			/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
 			/*background-gradient*/
 			background-color:#fff;
@@ -280,8 +280,9 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 /* -------------------------------------------------------------------------- */
 /* container */
 .pageTitle {
-	position:absolute; top:0; left:0; width:100%; height:auto; margin:0; padding:0 20px; overflow:hidden;
+	position:absolute; top:0; left:0; width:100%; height:auto; margin:0; padding:0 12px; overflow:hidden;
 	color:#444; border-top:1px solid #f2f2f2; border-bottom:1px solid #c4c4c4; text-shadow:0px 1px 0px rgba(255,255,255,0.5);
+	/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box;
 	/*background-gradient*/
 	background-color:#fff;
 	background-image:-webkit-gradient(linear, left top, left bottom, color-stop(0%,rgba(0,0,0,0)), color-stop(100%,rgba(0,0,0,0.2)));
@@ -290,10 +291,25 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 	background-image:-o-linear-gradient(top, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%);
 	background-image:linear-gradient(to bottom, rgba(0,0,0,0) 0%, rgba(0,0,0,0.2) 100%); }
 
-	/* label */
-	.pageTitle > .label {
-		display:block; width:auto; height:auto; overflow:hidden;
-		color:#444; font-family:'SourceSansPro',sans-serif; font-size:14px; font-weight:400; line-height:33px; }
+	/* common */
+	.pageTitle > .label,
+	.pageTitle > .sublabel { 
+		display:inline-block; width:auto; height:auto; overflow:hidden;
+		color:#888; text-transform:uppercase; vertical-align:middle; white-space:nowrap;
+		font-family:'Montserrat',sans-serif; font-size:11px; font-weight:400; line-height:33px; }
+	
+	/* labels */
+	.pageTitle > .label { font-weight:700; }
+	.pageTitle > .sublabel { color:#999; font-size:9px; line-height:9px; border-left:1px solid #999; margin:12px 6px; padding-left:6px; }
+
+
+/* ==========================================================================
+   structure - PAGEFORMTITLE
+   ========================================================================== */
+
+/* -------------------------------------------------------------------------- */
+/* container */
+.pageFormTitle { position:absolute; left:0; }
 
 
 /* ==========================================================================
@@ -306,9 +322,11 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 	position:absolute; top:0; left:0; bottom:0; width:100%; height:auto; margin:0; padding:0; overflow:hidden; }
 .pageHeader + .pageNav,
 .pageHeader + .pageTitle,
+.pageHeader + .pageFormTitle,
 .pageHeader + .pageContent { top:50px; }
 .pageHeader + .pageNav + .pageContent { top:80px; }
 .pageHeader + .pageTitle + .pageContent { top:85px; }
+.pageHeader + .pageFormTitle + .pageContent { top:85px; }
 
 	/* -------------------------------------------------------------------------- */
 	/* scroller */
@@ -362,7 +380,7 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 		.menu .title .label {
 			display:block; width:auto; height:auto; margin:15px; padding:0; overflow:hidden;
 			color:#fff; text-shadow:0 1px 0 rgba(0,0,0,0.5); white-space:nowrap; text-overflow:ellipsis;
-			font-family:'SourceSansPro',sans-serif; font-size:20px; font-weight:600; line-height:20px; }
+			font-size:20px; font-weight:600; line-height:20px; }
 
 		/* btnMenu */
 		.menu .title .btnMenu {
@@ -460,7 +478,7 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 		.menuList .title .label {
 			display:block; width:auto; height:auto; margin:13px; padding:0; overflow:hidden;
 			color:#fff; text-shadow:0 1px 0 rgba(0,0,0,0.5); white-space:nowrap; text-overflow:ellipsis;
-			font-family:'SourceSansPro',sans-serif; font-size:24px; font-weight:600; line-height:24px; }
+			font-size:24px; font-weight:600; line-height:24px; }
 
 	/* -------------------------------------------------------------------------- */
 	/* scroller */
@@ -529,15 +547,37 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 .dateBlock {
 	position:absolute; width:50px; height:50px; margin:0; padding:0; overflow:hidden;
-	background:rgba(255,255,255,0.7); }
+	background:rgba(255,255,255,0.9); }
 
 	/* d,m */
 	.dateBlock .d,
 	.dateBlock .m {
 		display:block; width:100%; height:auto; margin:0; padding:0; text-shadow:0px 1px 0px #fff;
-		color:#333; font-family:'SourceSansPro',sans-serif; font-weight:600; line-height:1em; text-align:center; text-transform:uppercase; }
+		color:#333; font-weight:600; line-height:1em; text-align:center; text-transform:uppercase; }
 	.dateBlock .d { margin:8px 0 0 0; font-size:30px; }
 	.dateBlock .m { margin:-4px 0 0 0; font-size:9px; font-weight:700; }
+	
+	
+/* ==========================================================================
+   common - TIMEBLOCK
+   ========================================================================== */
+
+.timeBlock {
+	position:absolute; width:50px; height:30px; margin:0; padding:0; overflow:hidden;
+	background:rgba(255,255,255,0.8); }
+
+	/* common */
+	.timeBlock .label,
+	.timeBlock .labelContent {
+		display:block; width:auto; height:12px; margin:0; padding:0; overflow:hidden; float:left;
+		font-size:9px; font-weight:700; line-height:12px; text-align:left; text-transform:uppercase; }
+	.timeBlock span:nth-child(1),
+	.timeBlock span:nth-child(2) 		{ padding-top:4px; }	
+	.timeBlock span:nth-last-child(1),
+	.timeBlock span:nth-last-child(2) 	{ padding-bottom:3px; }
+	
+	.timeBlock .label { width:11px; color:#fff; background:#66c2cb; margin:0; text-align:center; }
+	.timeBlock .labelContent { color:#333; margin:0 0 0 4px; }
 
 
 /* ==========================================================================
@@ -592,7 +632,10 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 	.mediaView .imgPoster { width:100%; }
 
 	/* dateBlock */
-	.mediaView .dateBlock { bottom:20px; left:20px; }
+	.mediaView .dateBlock { bottom:49px; left:12px; }
+	
+	/* timeBlock */
+	.mediaView .timeBlock { bottom:18px; left:12px; }
 
 
 /* ==========================================================================
@@ -602,8 +645,7 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 /* -------------------------------------------------------- */
 /* container */
 .contentView {
-	color:#333; background:none;
-	font-family:'SourceSansPro',sans-serif; }
+	color:#333; background:none; }
 
 	/* -------------------------------------------------------------------------- */
 	/* content */
@@ -692,6 +734,15 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 		:-moz-placeholder 				{ color:#333; }
 		::-moz-placeholder 				{ color:#333; }
 		:-ms-input-placeholder			{ color:#333; }
+		
+		/* select */
+		select { 
+			display:block; width:100%; height:35px; margin:0; padding:0 40px 0 13px; overflow:hidden;
+			color:#fff; border:none; background:#444 url(../img/icon-angle-down.png) right center no-repeat; background-size:35px 10px;
+			white-space:nowrap; text-overflow:ellipsis;
+			font-family:'Montserrat',sans-serif; font-size:15px; font-weight:700; line-height:35px;
+			/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
+		.android select { padding-left:8px; }
 
 
 /* ==========================================================================
@@ -785,10 +836,10 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 .itemEvent.active .dateBlock { background:#fff; border-color:#fff; }
 
 /* newsletter */
-.itemNewsletter .content { margin:0 40px 0 5px; }
+.itemNewsletter .content { margin:0 50px 0 0; }
 .itemNewsletter .content .title { height:32px;/*2 lines*/ }
 .itemNewsletter .icon {
-	width:35px; height:35px; margin:-18px 0 0 0; padding:0; overflow:hidden;
+	right:6px; width:35px; height:35px; margin:-18px 0 0 0; padding:0; overflow:hidden;
 	color:#444; font-size:22px; line-height:1em; }
 .itemNewsletter .iconLabel:after {
 	display:block; width:100%;
@@ -826,16 +877,16 @@ body.menuActive #pgMenu .pageShadow { display:block; }
 
 		/* date */
 		.itemGallery .content .date {
-			color:#888; font-size:8px;  line-height:20px; }
+			color:#888; font-size:9px;  line-height:20px; }
 
 		/* date */
 		.itemGallery .content .title {
-			max-height:42px;/*3 lines*/
-			color:#fff; font-size:12px; line-height:14px; }
+			max-height:45px;/*3 lines*/
+			color:#fff; font-size:13px; line-height:15px; }
 
 		/* icon */
 		.itemGallery .content .icon {
-			top:auto; bottom:15px; left:0; width:100%; height:18px; margin:0; padding:0 15px; overflow:hidden;
+			top:auto; bottom:10px; left:0; width:100%; height:18px; margin:0; padding:0 15px; overflow:hidden;
 			color:rgba(255,255,255,0.4); font-size:18px; line-height:1em; text-align:left;
 			/*box-sizing*/-webkit-box-sizing:border-box; -moz-box-sizing:border-box; box-sizing:border-box; }
 		.itemGallery .content .icon:after {
@@ -898,7 +949,7 @@ h3[data-role="title"] > .label { font-size:15px; line-height:35px; }
 h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
 
 .titleAccordion[data-role="title"] { background:#444; }
-.titleAccordion[data-role="title"] > .label { font-size:15px; line-height:35px; }
+.titleAccordion[data-role="title"] > .label { font-size:12px; line-height:35px; }
 .titleAccordion[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
 
 
@@ -970,7 +1021,7 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
 	.btnCap .label {
 		display:block; overflow:hidden;
 		white-space:nowrap; text-overflow:ellipsis;
-		font-family:'Montserrat'; font-size:13px; font-weight:700; line-height:42px; }
+		font-family:'Montserrat'; font-size:15px; font-weight:700; line-height:42px; }
 
 /* interaction */
 .btnCap.active { background-color:#006195; }
@@ -1139,7 +1190,7 @@ h3[data-role="title"] > .icon { height:35px; font-size:15px; line-height:35px; }
 /* contactList */
 #contactList { width:100%; height:240px; }
 #contactList .btnCap { width:80%; }
-#contactList .btnCap:first-child { margin-top:25px; }
+#contactList .btnCap:first-child { margin-top:35px; }
 
 /* contactInfo */
 #contactInfo { position:absolute; top:240px; left:0; bottom:0; width:100%; height:auto; overflow:hidden; }
